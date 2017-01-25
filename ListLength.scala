@@ -26,6 +26,13 @@ package com.knoldus.list.detail.assignment
       }
     }
 
+    def splitList[A](l: List[A], f: A => Boolean): (List[A], List[A]) = {
+    
+    	val list1 = for(x<-l if(f(x)))yield x
+    	val list2 = for(x<-l if(!f(x)))yield x
+    	(list1,list2)
+  	}
+
   }
 
   object ListMethods {
@@ -41,7 +48,9 @@ package com.knoldus.list.detail.assignment
 
       println("/n concateList method /n")
       println(listMethods.concateList(List(1, 2, 3), List(5, 6, 4)))
-      
+     
+ 	  println("/n splitList method /n")
+ 	  println(listMethods.splitList(List(1,2,3,4,5,6),(x:Int) => x>2)) 
     }
 
   }
