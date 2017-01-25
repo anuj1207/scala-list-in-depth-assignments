@@ -16,11 +16,13 @@ package com.knoldus.list.detail.assignment
     def concateList[A](l1:List[A],l2:List[A]):List[A] = {
       
       l2 match {
+        
+        case x::Nil  => l1:+x
+	      
         case x::xs => {
           val resultList = l1:+x
           concateList(resultList,xs)
         }
-        case x::Nil  => l1:+x
 
         case _ => l1
       }
