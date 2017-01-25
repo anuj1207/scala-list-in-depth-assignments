@@ -42,14 +42,14 @@ package com.knoldus.list.detail.assignment
       val list = List(1,2,3,4,5)
       val listMethods = new ListMethods()
 	
-	  println("/n getting length method /n")	      
+	  println("\n Getting Length Method \n")	      
       val listLength = listMethods.length(list)
       println("Length: "+listLength)
 
-      println("/n concateList method /n")
+      println("\n ConcateList Method \n")
       println(listMethods.concateList(List(1, 2, 3), List(5, 6, 4)))
      
- 	  println("/n splitList method /n")
+ 	  println("\n SplitList Method \n")
  	  println(listMethods.splitList(List(1,2,3,4,5,6),(x:Int) => x>2)) 
     }
 
